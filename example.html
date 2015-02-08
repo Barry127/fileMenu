@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>fileMenu example</title>
+        
+        <!-- optional CSS files -->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        
+        <!-- fileMenu CSS file -->
+        <link rel="stylesheet" type="text/css" href="src/css/fileMenu.min.css">
+        
+        <!-- some page styling -->
+        <style>
+            .header {
+                height: 300px;
+                width: 100%;
+                position: absolute;
+                background-image: url(http://lorempixel.com/1920/600/nature);
+                z-index: -1;
+            }
+            
+            .content {
+                margin-top: 270px;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header"></div>
+        <ul id="menu">
+            <li>
+                File
+                <ul>
+                    <li><i class="fa fa-fw fa-file"></i> Open<kbd>Ctrl+N</kbd></li>
+                    <li class="disabled"><i class="fa fa-fw fa-folder-open"></i> Open<kbd>Ctrl+O</kbd></li>
+                    <li class="sub">
+                        <i class="fa fa-fw"></i> Open Recent...
+                        <ul>
+                            <li><i class="fa fa-fw fa-file"></i> File A</li>
+                            <li><i class="fa fa-fw fa-file"></i> File B</li>
+                            <li><i class="fa fa-fw fa-file"></i> File C</li>
+                        </ul>
+                    </li>
+                    <li class="divider"></li>
+                    <li><i class="fa fa-fw"></i> Quit<kbd>Ctrl+Q</kbd></li>
+                </ul>
+            </li>
+            <li>
+                Help
+                <ul>
+                    <li class="toggle"><i class="fa fa-fw"></i> Toggle me</li>
+                    <li><i class="fa fa-fw fa-question-circle"></i> About<kbd>F1</kbd></li>
+                </ul>
+            </li>
+        </ul>
+        
+        <div class="content">
+            <h1>Some content</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse luctus tortor rutrum lorem venenatis viverra. Aliquam lacinia massa rhoncus mauris euismod porta. Sed et mi id risus tristique laoreet. Ut pulvinar nunc non ornare mattis. Nulla lectus sapien, porta vitae eleifend at, maximus a lectus. Curabitur vel eleifend urna. Nulla sit amet tincidunt velit. Duis dapibus sit amet ante sed vulputate. Aliquam sollicitudin facilisis ligula quis imperdiet. Etiam iaculis in nunc id vehicula. Donec sagittis arcu nisl, ac volutpat ante consectetur id. Ut sit amet urna a nibh elementum commodo vel id libero. Nam ipsum augue, lacinia vel interdum sed, commodo nec mi.</p>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi egestas metus ac venenatis tincidunt. Maecenas in felis et massa pharetra aliquet. Curabitur consectetur, nulla vitae pellentesque scelerisque, metus metus ultricies ante, vitae suscipit augue ligula ut neque. Sed consectetur libero eu est gravida, eu consectetur enim eleifend. Praesent faucibus bibendum ligula vel placerat. Cras auctor in felis non ullamcorper. Nunc luctus aliquet dictum. Cras quam justo, laoreet in rhoncus in, suscipit sed tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla tempus arcu ultricies ex suscipit, id congue orci consequat. Nulla augue mi, rhoncus condimentum pharetra sit amet, sagittis a ligula. Nulla quis diam at orci tincidunt aliquam.</p>
+            <p>Donec consectetur ex ex, posuere semper elit gravida ac. Etiam hendrerit ante est, id interdum nibh molestie sed. Sed sit amet metus faucibus, iaculis magna ut, volutpat lacus. Quisque lacus lorem, lobortis sit amet lectus efficitur, bibendum rutrum est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse semper mattis semper. Proin rhoncus dui commodo, bibendum enim et, molestie tellus. Pellentesque varius ipsum ut condimentum placerat. </p>
+        </div>
+        
+        
+        <!-- jQuery -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery.js"></script>
+        
+        <!-- fileMenu JS file -->
+        <script type="text/javascript" src="src/js/fileMenu.js"></script>
+        
+        <!-- initialize fileMenu -->
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#menu').fileMenu({
+                    slideSpeed: 200
+                });
+            });
+        </script>
+    </body>
+</html>
